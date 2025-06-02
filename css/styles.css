@@ -1,0 +1,253 @@
+/* RETRO THEME */
+:root {
+  --retro-bg: #22223b;
+  --retro-pink: #ff6ec7;
+  --retro-cyan: #00fff7;
+  --retro-yellow: #ffe066;
+  --retro-purple: #9d4edd;
+  --retro-green: #00ff85;
+  --retro-white: #fffbe7;
+  --retro-border: #ff6ec7;
+}
+
+body {
+  background: linear-gradient(135deg, var(--retro-bg) 60%, var(--retro-purple) 100%);
+  color: var(--retro-white);
+  font-family: 'Orbitron', 'Press Start 2P', monospace, Arial, sans-serif;
+  margin: 0;
+}
+
+header {
+  background: var(--retro-pink);
+  color: var(--retro-bg);
+  border-bottom: 4px double var(--retro-cyan);
+  text-shadow: 2px 2px 0 var(--retro-yellow);
+  font-family: 'Press Start 2P', monospace;
+}
+
+h1, h2, h3 {
+  font-family: 'Press Start 2P', monospace;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 var(--retro-cyan);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+nav a {
+  color: var(--retro-cyan);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Orbitron', monospace;
+  border: 2px solid var(--retro-cyan);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  background: var(--retro-bg);
+  box-shadow: 0 0 8px var(--retro-cyan);
+  transition: background 0.2s, color 0.2s;
+}
+nav a:hover, nav a:focus {
+  background: var(--retro-cyan);
+  color: var(--retro-bg);
+}
+
+#hero {
+  background: repeating-linear-gradient(135deg, var(--retro-yellow), var(--retro-yellow) 10px, var(--retro-pink) 10px, var(--retro-pink) 20px);
+  color: var(--retro-bg);
+  text-align: center;
+  padding: 2rem 1rem;
+  border: 4px dashed var(--retro-cyan);
+  margin: 2rem 0 1rem 0;
+  box-shadow: 0 0 16px var(--retro-pink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+#join-event {
+  background: var(--retro-cyan);
+  color: var(--retro-bg);
+  border: 2px solid var(--retro-pink);
+  font-family: 'Press Start 2P', monospace;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 0;
+  cursor: pointer;
+  margin-top: 1rem;
+  box-shadow: 0 0 8px var(--retro-pink);
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+#join-event:hover {
+  background: var(--retro-pink);
+  color: var(--retro-white);
+}
+
+#create-event-form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+#create-event-form input, #create-event-form button {
+  padding: 0.5rem;
+  border-radius: 0;
+  border: 2px solid var(--retro-cyan);
+  font-size: 1rem;
+  font-family: 'Orbitron', monospace;
+  background: var(--retro-bg);
+  color: var(--retro-cyan);
+  box-shadow: 0 0 4px var(--retro-cyan);
+}
+#create-event-form button {
+  background: var(--retro-pink);
+  color: var(--retro-bg);
+  border: 2px solid var(--retro-yellow);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#create-event-form button:hover {
+  background: var(--retro-yellow);
+  color: var(--retro-pink);
+}
+
+section {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 1rem;
+  border: 2px solid var(--retro-border);
+  border-radius: 0;
+  background: rgba(34,34,59,0.7);
+  box-shadow: 0 0 8px var(--retro-cyan);
+}
+
+#map-container {
+  min-height: 300px;
+  height: 300px;
+  background: var(--retro-bg);
+  border: 2px solid var(--retro-yellow);
+  border-radius: 0;
+  margin-bottom: 1rem;
+  outline: none;
+  box-shadow: 0 0 8px var(--retro-yellow);
+}
+
+#weather-info {
+  min-height: 200px;
+  background: var(--sand-yellow);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#weather-info[aria-live] {
+  font-weight: bold;
+  color: var(--retro-green);
+  text-shadow: 1px 1px 0 var(--retro-pink);
+}
+
+#weather-info .forecast-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+#weather-info .forecast-day {
+  background: var(--retro-bg);
+  border: 2px solid var(--retro-cyan);
+  border-radius: 0;
+  padding: 1rem;
+  min-width: 150px;
+  box-shadow: 0 0 8px var(--retro-cyan);
+  text-align: center;
+  font-family: 'Orbitron', monospace;
+  color: var(--retro-yellow);
+  text-shadow: 1px 1px 0 var(--retro-pink);
+}
+#weather-info .forecast-date {
+  font-family: 'Press Start 2P', monospace;
+  color: var(--retro-green);
+  margin-bottom: 0.5rem;
+}
+#weather-info .forecast-temp {
+  font-size: 1.2rem;
+  color: var(--retro-cyan);
+  margin: 0.5rem 0;
+}
+#weather-info .forecast-wind {
+  font-size: 0.9rem;
+  color: var(--retro-white);
+}
+#weather-info .forecast-forecast {
+  font-size: 1rem;
+  color: var(--retro-pink);
+  margin-bottom: 0.5rem;
+}
+
+#event-list li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Orbitron', monospace;
+  color: var(--retro-yellow);
+  text-shadow: 1px 1px 0 var(--retro-pink);
+}
+
+.join-btn {
+  background: var(--retro-green);
+  color: var(--retro-bg);
+  border: 2px solid var(--retro-pink);
+  font-family: 'Press Start 2P', monospace;
+  padding: 0.3rem 1rem;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: 0 0 4px var(--retro-green);
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+.join-btn:hover {
+  background: var(--retro-pink);
+  color: var(--retro-white);
+}
+
+footer {
+  background: var(--retro-pink);
+  color: var(--retro-bg);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-family: 'Press Start 2P', monospace;
+  border-top: 4px double var(--retro-cyan);
+  text-shadow: 2px 2px 0 var(--retro-yellow);
+}
+
+/* Accessibility: focus styles */
+a:focus, button:focus, input:focus {
+  outline: 2px dashed var(--retro-yellow);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  section {
+    padding: 0.5rem;
+  }
+  #hero {
+    font-size: 0.8rem;
+  }
+}

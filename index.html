@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoreSquad</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Leaflet CSS for map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Retro Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>ShoreSquad</h1>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#map" tabindex="0">Map</a></li>
+        <li><a href="#events" tabindex="0">Events</a></li>
+        <li><a href="#weather" tabindex="0">Weather</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="hero">
+      <h2>Rally your crew. Clean the coast. Make waves.</h2>
+      <button id="join-event" aria-label="Join a Cleanup Event">Join a Cleanup</button>
+      <form id="create-event-form" aria-label="Create Event" style="margin-top:1rem;">
+        <input type="text" id="event-name" placeholder="Event Name" aria-label="Event Name" required />
+        <input type="date" id="event-date" aria-label="Event Date" required />
+        <button type="submit">Create Event</button>
+      </form>
+    </section>
+    <section id="map">
+      <h3>Find a Beach Cleanup</h3>
+      <div id="map-container" tabindex="0" aria-label="Map showing beach cleanups" style="height:300px;">Loading map...</div>
+    </section>
+    <section id="weather">
+      <h3>Weather Forecast</h3>
+      <div id="weather-info" tabindex="0" aria-live="polite">Loading weather...</div>
+    </section>
+    <section id="events">
+      <h3>Upcoming Events</h3>
+      <ul id="event-list"></ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 ShoreSquad. Eco-action made fun.</p>
+  </footer>
+  <!-- Leaflet JS for map -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
